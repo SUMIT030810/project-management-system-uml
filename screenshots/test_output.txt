@@ -1,0 +1,19 @@
+test_add_feedback_uses_current_stage (__main__.TestAssignmentAndFeedback.test_add_feedback_uses_current_stage) ... ok
+test_assign_employee_creates_assignment (__main__.TestAssignmentAndFeedback.test_assign_employee_creates_assignment) ... ok
+test_feedback_rating_is_clamped (__main__.TestAssignmentAndFeedback.test_feedback_rating_is_clamped) ... ok
+test_data_science_large_dataset_surcharge (__main__.TestBilling.test_data_science_large_dataset_surcharge) ... ok
+test_mobile_project_billing_surcharge (__main__.TestBilling.test_mobile_project_billing_surcharge) ... ok
+test_payment_status_transitions (__main__.TestBilling.test_payment_status_transitions) ... ok
+test_web_project_billing_is_flat (__main__.TestBilling.test_web_project_billing_is_flat) ... ok
+test_company_registers_everything (__main__.TestCompany.test_company_registers_everything) ... ok
+test_client_tracks_projects (__main__.TestEmployeeAndClient.test_client_tracks_projects) ... ok
+test_employee_creation (__main__.TestEmployeeAndClient.test_employee_creation) ... ok
+test_advance_stage_moves_forward (__main__.TestProjectLifecycle.test_advance_stage_moves_forward) ... ok
+test_advance_stage_stops_at_maintenance (__main__.TestProjectLifecycle.test_advance_stage_stops_at_maintenance) ... ok
+test_initial_stage_is_requirement_feasibility (__main__.TestProjectLifecycle.test_initial_stage_is_requirement_feasibility) ... ok
+test_status_completed_after_reaching_maintenance (__main__.TestProjectLifecycle.test_status_completed_after_reaching_maintenance) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK

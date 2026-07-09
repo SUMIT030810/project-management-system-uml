@@ -1,0 +1,78 @@
+COMPANY: BrightWave Technologies
+Employees : 4
+Clients   : 2
+Projects  : 3
+
+======================================================================
+PROJECT REPORT: Acme E-commerce Portal  [PRJ-0007]
+======================================================================
+Type            : WebDevelopmentProject
+Client          : Rohan Kapoor
+Status          : Completed
+Deadline        : 2026-09-30
+Life-cycle path : Requirement Feasibility -> Testing -> Deployment -> Maintenance (current)
+Deliverables    : Responsive Website, Admin Dashboard, Deployment on Cloud
+Requirements    :
+   - [High] User authentication & login -> Pending
+   - [High] Product catalog with search -> Pending
+   - [Medium] Payment gateway integration -> Pending
+Team Assignments:
+   - Alice Fernandes assigned as 'Project Lead' on 2026-07-08
+   - Bob D'Souza assigned as 'Backend Developer' on 2026-07-08
+   - Carol Nair assigned as 'Frontend Developer' on 2026-07-08
+Client Feedback:
+   - [Requirement Feasibility] Rating: 5/5 - "Requirements look complete and clear."
+   - [Testing] Rating: 4/5 - "Found a couple of minor bugs during UAT."
+   - [Deployment] Rating: 5/5 - "Deployment went smoothly, app is live."
+   - [Maintenance] Rating: 5/5 - "Support response time has been great."
+INVOICE BILL-0008 | Date: 2026-07-08 | Total: Rs.8000.00 | Paid: Rs.4000.00 | Balance: Rs.4000.00 | Status: Partially Paid
+======================================================================
+Final Billing Amount (polymorphic calculate_billing()): Rs.8000.00
+
+======================================================================
+PROJECT REPORT: FinServ Customer App  [PRJ-0015]
+======================================================================
+Type            : MobileAppProject
+Client          : Meera Iyer
+Status          : Completed
+Deadline        : 2026-11-15
+Life-cycle path : Requirement Feasibility -> Testing -> Deployment -> Maintenance (current)
+Deliverables    : Android App Build, iOS App Build, Play/App Store Listing
+Requirements    :
+   - [High] Biometric login -> Pending
+   - [Medium] Push notifications -> Pending
+Team Assignments:
+   - Alice Fernandes assigned as 'Project Lead' on 2026-07-08
+   - Carol Nair assigned as 'Mobile UI Developer' on 2026-07-08
+Client Feedback:
+   - [Requirement Feasibility] Rating: 5/5 - "Requirements look complete and clear."
+   - [Testing] Rating: 4/5 - "Found a couple of minor bugs during UAT."
+   - [Deployment] Rating: 5/5 - "Deployment went smoothly, app is live."
+   - [Maintenance] Rating: 5/5 - "Support response time has been great."
+INVOICE BILL-0016 | Date: 2026-07-08 | Total: Rs.12000.00 | Paid: Rs.13200.00 | Balance: Rs.-1200.00 | Status: Paid
+======================================================================
+Final Billing Amount (polymorphic calculate_billing()): Rs.13200.00
+
+======================================================================
+PROJECT REPORT: Acme Customer Churn Prediction  [PRJ-0021]
+======================================================================
+Type            : DataScienceProject
+Client          : Rohan Kapoor
+Status          : Completed
+Deadline        : 2026-10-20
+Life-cycle path : Requirement Feasibility -> Testing -> Deployment -> Maintenance (current)
+Deliverables    : Trained Model, EDA Report, Model Deployment API
+Requirements    :
+   - [High] Clean & merge 3 years of sales data -> Pending
+   - [High] Build churn prediction model -> Pending
+Team Assignments:
+   - Dave Mehta assigned as 'Data Scientist' on 2026-07-08
+Client Feedback:
+   - [Requirement Feasibility] Rating: 5/5 - "Requirements look complete and clear."
+   - [Testing] Rating: 4/5 - "Found a couple of minor bugs during UAT."
+   - [Deployment] Rating: 5/5 - "Deployment went smoothly, app is live."
+   - [Maintenance] Rating: 5/5 - "Support response time has been great."
+INVOICE BILL-0022 | Date: 2026-07-08 | Total: Rs.6000.00 | Paid: Rs.2000.00 | Balance: Rs.4000.00 | Status: Partially Paid
+======================================================================
+Final Billing Amount (polymorphic calculate_billing()): Rs.6500.00
+

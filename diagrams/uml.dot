@@ -1,0 +1,55 @@
+digraph UML {
+    graph [rankdir=TB, splines=polyline, fontname="Helvetica", bgcolor="white", nodesep=0.7, ranksep=1.0];
+    node [shape=record, fontname="Helvetica", fontsize=10, style=filled, fillcolor="#EAF2FB", color="#2C3E50"];
+    edge [fontname="Helvetica", fontsize=9, color="#2C3E50"];
+
+    Company [label="{Company|- name : str\l- employees : List~Employee~\l- clients : List~Client~\l- projects : List~Project~\l|+ hire_employee()\l+ onboard_client()\l+ register_project()\l+ company_summary()\l}"];
+
+    Employee [label="{Employee|- employee_id : str\l- name : str\l- designation : str\l- skills : List~str~\l|+ get details()\l}"];
+
+    Client [label="{Client|- client_id : str\l- name : str\l- contact_email : str\l- company_name : str\l- projects : List~Project~\l|+ add_project()\l}"];
+
+    Assignment [label="{Assignment|- assignment_id : str\l- role : str\l- assigned_date : date\l|+ (links Employee <-> Project)\l}", fillcolor="#FDEBD0"];
+
+    Requirement [label="{Requirement|- requirement_id : str\l- description : str\l- priority : str\l- is_fulfilled : bool\l|+ mark_fulfilled()\l}", fillcolor="#FDEBD0"];
+
+    DevelopmentTracker [label="{DevelopmentTracker|- current_index : int\l- history : List~dict~\l|+ advance_stage()\l+ current_stage()\l}", fillcolor="#FDEBD0"];
+
+    Billing [label="{Billing|- billing_id : str\l- total_amount : float\l- amount_paid : float\l- status : PaymentStatus\l|+ record_payment()\l+ generate_invoice()\l+ balance_due()\l}", fillcolor="#FDEBD0"];
+
+    Feedback [label="{Feedback|- feedback_id : str\l- stage : ProjectStage\l- comments : str\l- rating : int\l|}", fillcolor="#FDEBD0"];
+
+    Project [label="{\<\<abstract\>\>\nProject|# project_id : str\l# name : str\l# budget : float\l# deadline : date\l# status : ProjectStatus\l# requirements : List~Requirement~\l# assignments : List~Assignment~\l# feedbacks : List~Feedback~\l|+ add_requirement()\l+ assign_employee()\l+ add_feedback()\l+ advance_stage()\l+ generate_report()\l+ calculate_billing() *\l+ get_deliverables() *\l}", fillcolor="#D6EAF8", peripheries=1];
+
+    WebDevelopmentProject [label="{WebDevelopmentProject|\l|+ calculate_billing()\l+ get_deliverables()\l}"];
+    MobileAppProject [label="{MobileAppProject|- platforms : List~str~\l|+ calculate_billing()\l+ get_deliverables()\l}"];
+    DataScienceProject [label="{DataScienceProject|- dataset_size_gb : float\l|+ calculate_billing()\l+ get_deliverables()\l}"];
+
+    /* Inheritance (hollow triangle) */
+    edge [arrowhead=empty, style=solid];
+    WebDevelopmentProject -> Project;
+    MobileAppProject -> Project;
+    DataScienceProject -> Project;
+
+    /* Composition (filled diamond) - Project owns Tracker & Billing */
+    edge [arrowhead=none, arrowtail=diamond, dir=back, style=solid];
+    Project -> DevelopmentTracker [label="1        1", arrowtail=diamond];
+    Project -> Billing [label="1        1", arrowtail=diamond];
+
+    /* Aggregation (hollow diamond) - Company/Client hold references */
+    edge [arrowtail=odiamond];
+    Company -> Employee [label="1        *"];
+    Company -> Client [label="1        *"];
+    Company -> Project [label="1        *"];
+    Client -> Project [label="1        1..*"];
+
+    /* Composition: Project *-- Requirement / Feedback (part-of, no independent life) */
+    edge [arrowtail=diamond];
+    Project -> Requirement [label="1        *"];
+    Project -> Feedback [label="1        *"];
+
+    /* Association through Assignment class (many-to-many Employee<->Project) */
+    edge [dir=none, arrowtail=none, style=dashed];
+    Employee -> Assignment [label="1        *"];
+    Project -> Assignment [label="1        *"];
+}
